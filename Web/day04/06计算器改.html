@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="i1"><br>
+<input type="text" id="i2"><br>
+<input type="button" value="加" onclick="f(1)">
+<input type="button" value="减" onclick="f(2)">
+<input type="button" value="乘" onclick="f(3)">
+<input type="button" value="除" onclick="f(4)">
+<div>
+    结果:<span></span>
+</div>
+<script>
+    function f(n) {
+        /*
+        let i1 = document.querySelector("#i1");
+        let i2 = document.querySelector("#i2");
+        */
+        let s = document.querySelector("span");
+        //s.innerText = i1.value*1+i2.value*1;
+        //parseFloat 将字符串转成整数或小数
+        switch (n){
+            case 1 : s.innerText = parseFloat(i1.value)+parseFloat(i2.value);
+            break;
+            case 2 : s.innerText = parseFloat(i1.value)-parseFloat(i2.value);
+            break;
+            case 3 : s.innerText = parseFloat(i1.value)*parseFloat(i2.value);
+            break;
+            case 4 : s.innerText = parseFloat(i1.value)/parseFloat(i2.value);
+            break;
+            }
+        }
+</script>
+
+</body>
+</html>

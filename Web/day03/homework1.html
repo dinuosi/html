@@ -2,34 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nintendo Switchr™ Family - Nintendo - Offciakl Site</title>
+    <title>Title</title>
     <style>
         body{
             font: 12px "simhei", Arial, Helvetica, sans-serif;
             color: #666;
         }
         body>div{
+            height: 10000px;
             width: 1000px;
             margin: 0 auto;/*内容整体居中*/
             background-color: #0aa1ed;
         }
         #t_div>div,#b_l_div,#b_r_div>div{
-            background-color: #e8e8e8;
+            background-color: #ffffff;
         }
         #t_l_div{
-            width: 611px;height: 376px;
+            width: 1000px;
+            height: 500px;
             float: left;
         }
         #t_r_div{
-            width: 375px;height: 376px;
+            width: 1000px;
+            height: 376px;
             float: right;
         }
         #t_div{
             overflow: hidden;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         #b_l_div{
-            width: 366px;
+            width: 1000px;
             height: 233px;
             float: left;
         }
@@ -49,57 +52,76 @@
         #t_l_div>div{
             width: 245px;
             height: 232px;
-            margin: 68px 0 0 36px;
+            margin: 400px 0 0 170px;
         }
         .title_p{
-            font-size: 32px;
+            font-size: 20px;
             color: #333;
-            margin-bottom: 12px;
+            margin: 410px 0 0 20px;
+            float: left;
+        }
+        #t_l_div>div>img{
+            position: absolute;
+            left: 660px;
+            top: 380px;
+            width: 60px;
+            height: auto;
         }
         .price_p{
-            font-size: 24px;
-            color: #0aa1ed;
+            position: absolute;
+            font-size: 12px;
             font-weight: bold;
-            margin-bottom: 12px;
+            left: 740px;
+            top: 400px;
         }
         a{
             display: block;
             width: 132px;
             height: 40px;
-            background-color: #0aa1ed;
+            background-color: red;
             text-align: center;
             line-height: 40px;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 18px;
             color: white;
             border-radius: 3px;
         }
         #t_l_div img{
             position: absolute;
-            width: 100%;
+            left: 10px;
+            top: 10px;
+            width: 980px;
             height: auto;
-            transition-duration: 1.25s;/*设置动画持续时间1.25秒*/
-        }
-        img:hover{
-            transform: scale(1.1);/*缩放1.1倍*/
         }
         #t_l_div{
             position: relative;/*参照物*/
         }
 
-
-
-
-
     </style>
 </head>
-<body>
 <body>
 <div>
     <div id="t_div">
         <div id="t_l_div">
-            <img src="https://assets.nintendo.com/image/upload/f_auto,h_635,q_auto,w_1440/ncom/en_US/switch/site-design-update/switch-family" alt="">
+
+
+            <p class="title_p">Available now</p>
+
+            <p class="price_p">Blood, Use of Alcohol, Mild Suggestive Themes, Language, Fantasy Violence</p>
+
+
+            <div>
+                <a href="">Learn more</a>
+
+            </div>
+            <div >
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/ESRB_2013_Teen.svg/600px-ESRB_2013_Teen.svg.png" alt="">
+            </div>
+            <img src="https://assets.nintendo.com/image/upload/c_fill,dpr_1.0,f_auto,q_auto,w_1500/b_transparent/v1/ncom/en_US/merchandising/center-stage-banner/triangle-strategy/Ncom_3600x1300_desktop" alt="">
+
         </div>
+        <hr color="gray">
+        <div id="t_r_div"></div>
     </div>
     <div id="b_div">
         <div id="b_l_div"></div>
@@ -107,9 +129,9 @@
             <div></div>
             <div></div>
             <div></div>
+            <div></div>
         </div>
     </div>
 </div>
-</body>
 </body>
 </html>
