@@ -5,6 +5,19 @@
     <title>Title</title>
 </head>
 <body>
+<input type="text" placeholder="数量" id = "i1">
+<input type="button" value="添加帅哥" onclick="f(1)">
+<input type="button" value="添加美女" onclick="f(2)">
 
+<script>
+    function f(x){
+        for (let j = 0; j<i1.value;j++) {
+            let imgName = x == 1 ? "rmb.jpg" : "dollar.jpg";
+            let i = document.createElement("img");
+            i.src = imgName;
+            document.body.appendChild(i);
+        }
+    }
+</script>
 </body>
 </html>
