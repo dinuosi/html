@@ -6,7 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cgb12" />
+        <module name="jdbc02" />
+        <module name="jabc01" />
       </profile>
     </annotationProcessing>
   </component>
