@@ -1,4 +1,4 @@
-package cn.tedu;
+package tedu;
 
 import com.alibaba.druid.pool.DruidDataSource;
 

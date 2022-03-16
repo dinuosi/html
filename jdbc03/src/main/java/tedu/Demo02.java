@@ -1,4 +1,6 @@
-package cn.tedu;
+package tedu;
+
+import cn.tedu.DBUtils;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

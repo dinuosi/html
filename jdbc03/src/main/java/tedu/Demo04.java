@@ -1,6 +1,11 @@
-package cn.tedu;
+package tedu;
 
-import java.sql.*;
+import cn.tedu.DBUtils;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Demo04 {
