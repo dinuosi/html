@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <caption>员工列表</caption>
+    <tr>
+        <th>id</th><th>名字</th>
+        <th>工资</th><th>工作</th><th>操作</th>
+    </tr>
+    <tr v-for="emp in arr">
+        <td>{{emp.id}}</td>
+        <td><a :href="'/update.html?id='+emp.id">{{emp.name}}</a></td>
+        <td>{{emp.sal}}</td><td>{{emp.job}}</td>
+        <!--href="javascript:void(0)废掉超链接的跳转功能-->
+        <td>
+            <a :href="'/update.html?id='+emp.id">修改</a>
+            <a href="javascript:void(0)" @click="del(emp.id)">删除</a></td>
+    </tr>
+</table>
+<script src="js/vue.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script>
+    let v = new Vue({
+        el:"table",
+        data:{
+            arr:[]
+        },
+        created:function () { //此方法页面创建完成后执行
+            //进入页面后发请求的代码都写在这个方法中
+            axios.get("/select").then(function (response) {
+                //把服务器返回的数据给到数组, 页面会自动发生改变
+                //服务器返回的是二进制数据,会先将二进制数据转成Json格式的字符串
+                //然后axios框架会将JSON格式的字符串再转成数组里面装对象
+                v.arr = response.data;
+            })
+        },
+        methods:{
+            del(id){
+                if (confirm("您确认删除此员工吗?")){
+                    //发出异步请求
+                    //删除请求 使用get
+                    axios.get("/delete?id="+id).then(function (response) {
+                        //删除完成后刷新页面
+                        location.reload();
+                    })
+                }
+
+
+            }
+        }
+    })
+</script>
+</body>
+</html>
