@@ -1,10 +1,10 @@
-package cn.tedu.myboot421;
+package cn.tedu.boot421;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Myboot421ApplicationTests {
+class Boot421ApplicationTests {
 
     @Test
     void contextLoads() {
